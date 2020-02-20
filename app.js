@@ -36,18 +36,7 @@ app.get('/movie', (req, res) => {
     if (!avg_vote) {
         results=results;
     }
-    if(genre && typeof genre !== String) {
-        return res
-        .status(400)
-        .send('genre must be a string')
-    }
-
-    if(country && typeof country !== String) {
-        return res
-        .status(400)
-        .send('country must be a string')
-    }
-
+    
     if(avg_vote && Number.isNaN(vote)) {
         return res
         .status(400)
